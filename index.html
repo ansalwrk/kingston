@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+<l........................project-style-start..................>
+    <style>
+        /* Portfolio Section */
+        .portfolio-wrapper { 
+            position: absolute;
+            width: 70vw;
+            bottom: 0%; 
+            left:-41%;
+            opacity: 0; 
+            transition: opacity 1.5s ease; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-end;
+        }
+
+        .portfolio-wrapper.is-visible { 
+            opacity: 1; 
+        }
+
+        .navigation-orbit {
+            position: relative;
+            bottom: -4%;
+            right: -80%;
+            width: 600px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .service-card {
+            position: absolute;
+            bottom: 0;
+            width: 160px;
+            height: 210px;
+            background: #09411e;
+            clip-path: polygon(50% 100%, 15% 0%, 85% 0%);
+            transform-origin: bottom center;
+            transform: rotate(calc((var(--i) - 3.5) * 30deg));
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor:grab;
+            z-index: 10;
+        }
+
+        .service-card:hover {
+            background: #204a80;
+            transform: rotate(calc((var(--i) - 3.5) * 30deg)) translateY(-30px);
+        }
+
+        .service-inner {
+            position: absolute;
+            top: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            width: 140px;
+        }
+
+        .service-inner h5 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-center-hub {
+            position: absolute;
+            bottom: -150px;
+            width: 210px;
+            height: 230px;
+            background: white;
+            border-radius: 180%;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+        }
+
+        .brand-content { 
+            text-align: center; 
+            margin-top: -145px; 
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            .page-layout { flex-direction: column; overflow-y: auto; }
+            .content-sidebar, .portfolio-wrapper { width: 100%; height: auto; left: 0; }
+        }
+    </style>
+    <l.....................project-style-end...................>
+</head>
+<body>
+    <div class="tittle"><h1>WEB DEVELOPER</h1>
+      <div class="name"><h2>ANSAL KINGSTON</h2></div>
+    </div>
+<l..........................image--text-start............................>
+ <div class="corner-image"> <img src="kingston.png">
+    <div class="floating-container">
+            <input type="checkbox" id="toggle-card">
+         <label for="toggle-card" class="trigger-btn">
+            <span>Contact Me</span>
+          </label>
+
+        <section class="card-content">
+         <span class="about"><h2>ANSAL KINGSTON.C</h2></span>
+         <span class="about"><h6>📞Mobile: +91 6282753288</h6></span>
+         <span class="about"><h6>📧Email: ansalkingston2910@gmail.com</h6></span>
+         <span class="about"><h6>🌏Location: Kanyakumari, Tamil Nadu, India</h6></span>
+       </section>
+    </div>
+  </div>
+<l..........................image--text-end...........................>
+<l..........................project-start............................>
+    <main class="portfolio-wrapper" id="portfolioView">
+        <div class="navigation-orbit">
+            <div class="orbit-path"></div>
+
+            <div class="service-card" style="--i: 1;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="coffee.prj/index.html">Coffee Shop </a></h5>
+                    <h1><a href="coffee.prj/index.html">↑↑</a></h1>
+                    <span>click</span>
+
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 2;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="dr.prj/index.html">Appoinment</a></h5>
+                    <h1><a href="dr.prj/index.html">↑↑</a></h1>
+                    <span>click</span>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 3;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="trust.prj/index.html">Trust</a></h5>
+                    <h1><a href="trust.prj/index.html">↑↑</a></h1>
+                    <span>click</span>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 4;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="vegetable/index.html">Vegetable</a></h5>
+                     <h1><a href="vegetable/index.html">↑↑</a></h1>
+                     <span>click</span>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 5;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="car.prj/index.html">Car</a></h5>
+                    <h1><a href="car.prj/index.html">↑↑</a></h1>
+                    <span>click</span>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 6;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="dress.prj/index.html">Dress</a></h5>
+                    <h1><a href="dress.prj/index.html">↑↑</a></h1>
+                    <span>click</span>
+                </div>
+            </div>
+
+            <div class="brand-center-hub">
+                <div class="brand-content">
+                    <h2>ANSAL</h2>
+                    <h4>PROJECT DESIGN</h4>
+                    <div class="status-indicators"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+<l..........................project-end............................>
+<l...........................skill-start..........................>
+<l...........................skill-end..........................>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<l................................................end..........................>
+                                      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const portfolio = document.getElementById('portfolioView');
+
+            // Trigger entrance visibility
+            setTimeout(() => {
+                if (portfolio) {
+                    portfolio.classList.add('is-visible');
+                }
+            }, 500);
+
+            // Sidebar interactivity
+            const rows = document.querySelectorAll('.opt-row');
+            rows.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    row.style.transform = 'translateX(-10px)';
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.style.transform = 'translateX(0)';
+                });
+            });
+        });
+                                         </script>
+
+  <script><src="script.js"></script>   
+</body>   
+</html>
