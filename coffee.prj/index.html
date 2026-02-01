@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Coffee | Billing System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>KING COFFEE</h1>
+            <p>Freshly Brewed Happiness</p>
+        </header>
+
+        <div class="main-content">
+            <section class="menu-section">
+                <h3>Select Items</h3>
+                <div class="product-grid" id="productGrid">
+                    </div>
+            </section>
+
+            <section class="billing-box">
+                <h3>Invoice Details</h3>
+                <div class="customer-details">
+                    <input type="text" id="custName" placeholder="Customer Name">
+                    <input type="text" id="custMobile" placeholder="Mobile Number" maxlength="10">
+                    <div class="invoice-info">
+                        <label>Invoice No:</label>
+                        <input type="text" id="invoiceNum" readonly>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="billTable">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="billBody">
+                            </tbody>
+                    </table>
+                </div>
+
+                <div class="total-section">
+                    <h4>Grand Total: ₹<span id="grandTotal">0</span></h4>
+                </div>
+
+                <div class="payment-qr">
+                    <p>Scan to Pay (UPI)</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=kingcoffee@bank" alt="UPI QR Code">
+                </div>
+
+                <button class="print-btn" onclick="window.print()">Generate & Print Bill</button>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
