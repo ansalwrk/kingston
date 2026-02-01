@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansal Project Design Portfolio</title>
+    <style>
+        /* Portfolio Section */
+        .portfolio-wrapper { 
+            position: absolute;
+            width: 70vw;
+            bottom: 0%; 
+            left: -36%;
+            opacity: 0; 
+            transition: opacity 1.5s ease; 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-end;
+        }
+
+        .portfolio-wrapper.is-visible { 
+            opacity: 1; 
+        }
+
+        .navigation-orbit {
+            position: relative;
+            bottom: -4%;
+            right: -80%;
+            width: 600px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .service-card {
+            position: absolute;
+            bottom: 0;
+            width: 160px;
+            height: 210px;
+            background: #09411e;
+            clip-path: polygon(50% 100%, 15% 0%, 85% 0%);
+            transform-origin: bottom center;
+            transform: rotate(calc((var(--i) - 3.5) * 30deg));
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .service-card:hover {
+            background: #204a80;
+            transform: rotate(calc((var(--i) - 3.5) * 30deg)) translateY(-30px);
+        }
+
+        .service-inner {
+            position: absolute;
+            top: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            width: 120px;
+        }
+
+        .service-inner h5 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-center-hub {
+            position: absolute;
+            bottom: -100px;
+            width: 210px;
+            height: 230px;
+            background: white;
+            border-radius: 50%;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+        }
+
+        .brand-content { 
+            text-align: center; 
+            margin-top: -80px; 
+        }
+
+        .orbit-path {
+            position: absolute;
+            bottom: 0;
+            width: 700px;
+            height: 350px;
+            border: 2px dashed rgba(0, 132, 255, 0.3);
+            border-radius: 350px 350px 0 0;
+            z-index: 5;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .page-layout { flex-direction: column; overflow-y: auto; }
+            .content-sidebar, .portfolio-wrapper { width: 100%; height: auto; left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="portfolio-wrapper" id="portfolioView">
+        <div class="navigation-orbit">
+            <div class="orbit-path"></div>
+
+            <div class="service-card" style="--i: 1;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="coffee.prj/index.html">COFFEE SHOP BILLING</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 2;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="dr.prj/index.html">DR APPOINTMENT</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 3;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="trust.prj/index.html">TRUST</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 4;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="vegetable/index.html">VEGETABLE SHOP</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 5;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="car.prj/index.html">CAR BOOKING</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="service-card" style="--i: 6;">
+                <div class="service-inner">
+                    <div class="service-icon"></div>
+                    <h5><a href="dress.prj/index.html">DRESS</a></h5>
+                    <h1>↑↑</h1>
+                </div>
+            </div>
+
+            <div class="brand-center-hub">
+                <div class="brand-content">
+                    <h2>ANSAL</h2>
+                    <h4>PROJECT DESIGN</h4>
+                    <div class="status-indicators"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const portfolio = document.getElementById('portfolioView');
+
+            // Trigger entrance visibility
+            setTimeout(() => {
+                if (portfolio) {
+                    portfolio.classList.add('is-visible');
+                }
+            }, 500);
+
+            // Sidebar interactivity
+            const rows = document.querySelectorAll('.opt-row');
+            rows.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    row.style.transform = 'translateX(-10px)';
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

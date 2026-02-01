@@ -1,0 +1,130 @@
+:root {
+    --gold: #ffffff;
+    --dark: #092e2e;
+    --light: #092e2e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif, Arial;
+    background-color: var(--light);
+}
+
+/* Contact Bar */
+.contact-bar {
+    background: var(--dark);
+    color: var(--gold);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Header & Logo */
+header {
+    background: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Grid Layout */
+.category-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Category Cards */
+.category-card {
+    position: relative;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Gold Overlay Effect */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    opacity: 0.9;
+}
+
+.overlay h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.shop-btn {
+    background: var(--gold);
+    border: none;
+    padding: 15px 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: rgb(0, 0, 0);
+    color: var(--dark);
+}

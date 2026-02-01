@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King of Fashion | Premium Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contact-bar">
+        <span><h3>CONTACT   :  6282753288</h3></span>
+        <span><h3>ADDRESS   :  Kurumpanai, Kanyakumari, Tamil Nadu</h3></span>
+    </div>
+
+    <header>
+
+        <div class="logo">KING OF FASHION</div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="categories" class="category-section">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            
+            <div class="category-card" onclick="navigateTo('man/index.html')">
+                <img src="image/man.png" alt="Male">
+                <div class="overlay">
+                    <h3>MALE </h3>
+                    <button class="shop-btn">VISIT</button>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="navigateTo('woman/index.html')">
+                <img src="image/woman.png" alt="Female">
+                <div class="overlay">
+                    <h3>FEMALE </h3>
+                    <button class="shop-btn">VISIT</button>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="navigateTo('boy/index.html')">
+                <img src="image/boy.png" alt="Boys">
+                <div class="overlay">
+                    <h3>BOYS </h3>
+                    <button class="shop-btn">VISIT</button>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="navigateTo('girl/index.html')">
+                <img src="image/girl.png" alt="Girls">
+                <div class="overlay">
+                    <h3>GIRLS </h3>
+                    <button class="shop-btn">VISIT</button>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="navigateTo('kids/index.html')">
+                <img src="image/kids.png" alt="Kids">
+                <div class="overlay">
+                    <h3>KIDS </h3>
+                    <button class="shop-btn">VISIT</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; king of fasion </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
