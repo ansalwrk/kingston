@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Vegetables | Kurumpanai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container no-print">
+    <header>
+        <h1>KING VEGETABLES</h1>
+        <div class="shop-address">
+            <p>Kurumpanai, Kanyakumari, Tamil Nadu, India</p>
+            <p><strong>Contact: +91 6282753288</strong></p>
+        </div>
+    </header>
+
+    <div class="customer-box">
+        <input type="text" id="custName" placeholder="Customer Name">
+        <input type="tel" id="custPhone" placeholder="Customer Phone">
+    </div>
+
+    <div class="product-grid" id="productGrid">
+        </div>
+
+    <div class="footer-bar">
+        <h2>Grand Total: ₹ <span id="grandTotal">0.00</span></h2>
+        <button onclick="printInvoice()" class="print-btn">Generate & Print Bill</button>
+    </div>
+</div>
+
+<div id="invoiceSection" class="print-only">
+    <div style="text-align: center;">
+        <h2>KING VEGETABLES</h2>
+        <p>Kurumpanai, Kanyakumari, Tamil Nadu</p>
+        <p>Ph: +91 6282753288</p>
+    </div>
+    <hr>
+    <p id="billDetails"></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <thead>
+            <tr style="border-bottom: 1px solid #000;">
+                <th align="left">Item</th>
+                <th align="center">Weight</th>
+                <th align="right">Price</th>
+            </tr>
+        </thead>
+        <tbody id="billItems"></tbody>
+    </table>
+    <hr>
+    <h3 align="right" id="billGrandTotal"></h3>
+    <p style="text-align: center; font-size: 12px; margin-top: 30px;">~ Thank you for shopping with us! ~</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

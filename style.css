@@ -137,12 +137,12 @@ display: flex;
 .skills-section {
   position: fixed;
   left: 0;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
-  width: 320px;
-  padding: 25px;
+  width: 300px;
+  padding: 20px;
   background: #1cbba000;
-  box-shadow: 4px 0 20px rgba(7, 157, 177, 0.322);
+  box-shadow: 4px 0 20px rgba(7, 157, 177, 0.068);
   animation: slideInLeft 1s ease forwards;
   font-family: Arial, sans-serif;
 }
@@ -166,7 +166,7 @@ display: flex;
 }
 
 .skill-group {
-  margin-bottom: 50%;
+  margin-bottom: 10%;
 }
 
 .skill-group h3 {
