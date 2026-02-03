@@ -1,10 +1,10 @@
 const vegetableData = [
-    { name: "Tomato", price: 40, img: "https://images.unsplash.com/photo-1546473427-e1871457733e?w=200" },
+    { name: "Tomato", price: 40, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGrlSoNcyDnMIqd1dfFkeeHLYESBofcq4I7xCHoFd1z2FyTjN3VtpB0ECD20gtLzYF3yYSyosJ8hfUC6wQ9kg6iRMGlJE1YFGwdC9jGDcztw&s=10" },
     { name: "Potato", price: 35, img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=200" },
     { name: "Onion", price: 50, img: "https://images.unsplash.com/photo-1508747703725-719777637510?w=200" },
     { name: "Green Chilli", price: 80, img: "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=200" },
-    { name: "Cabbage", price: 30, img: "https://images.unsplash.com/photo-1591584250647-99c44f8f9a27?w=200" },
-    { name: "Ginger", price: 160, img: "https://images.unsplash.com/photo-1599940824399-b87987cb94e0?w=200" }
+    { name: "Cabbage", price: 30, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDBBtP87f9wtVc5jBaqvxU_J-N3gSFDrNyzzC0cG-ujF0TMDPYBg1RAwRR_4kPa0b0zqnHQ83Wgu7AfURY9Vkt9peOAzycJxqQYoi3wQFUwQ&s=10" },
+    { name: "Ginger", price: 160, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ceeU1qNM_peVz9LDLO30EthHgoWt6Za9_MhVOEitqlWC875F5okNxxRwvz-1oN9k6wRko2qFBduq7wDyVBj_DrD1BxC4&s=10" }
 ];
 
 const productGrid = document.getElementById('productGrid');
