@@ -11,4 +11,9 @@
       skill.style.transform = 'translateX(0)';
     }, index * 120);
   });
+
+document.getElementById('unique-exp-trigger').addEventListener('click', function(e) {
+    // You can add custom logic here if needed
+    console.log("exp/index.html");
+});
 </script>

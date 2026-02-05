@@ -2,61 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. King | King Hospital Appointment</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>KING HOSPITAL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            /* Hospital background image */
+            background-image: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background: rgba(10, 110, 189, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0a6ebd;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #0a6ebd;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #084f8c;
+        }
+
+        .result {
+            margin-top: 25px;
+            background: #e8f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .result h3 {
+            color: green;
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="hero-section">
-        <div class="booking-card">
-            <header class="card-header">
-                <div class="logo">KING HOSPITAL</div>
-                <h1>Consult with Dr. King</h1>
-                <p class="contact-line">📞 6282753288 | 📧 ansalkingston2910@gmail.com</p>
-            </header>
+<header>
+    <h1>KING HOSPITAL</h1>
+    <p>Consult with Dr. King</p>
+    <p>📞 6282753288 | 📧 ansalkingston2910@gmail.com</p>
+</header>
 
-            <form id="appointmentForm">
-                <div class="input-field">
-                    <input type="text" id="name" placeholder="Full Name" required>
-                </div>
-                <div class="input field">
-                    <input type="age" id="age" placeholder="age"required>
-                    </div>
-                    
-                <div class="input-field">
-                    <input type="tel" id="mobile" placeholder="Mobile Number" required>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="reason" list="disease-options" placeholder="Reason for seeing a doctor" required>
-                    <datalist id="disease-options">
-                        <option value="General Health Checkup">
-                        <option value="Fever and Flu Symptoms">
-                        <option value="Diabetes Management">
-                        <option value="Hypertension (High Blood Pressure)">
-                        <option value="Chest Pain / Cardiology">
-                        <option value="Joint or Back Pain (Orthopedics)">
-                        <option value="Skin Rash or Allergy (Dermatology)">
-                        <option value="Digestive Issues (Gastroenterology)">
-                        <option value="Migraine or Severe Headache">
-                        <option value="Anxiety or Mental Health">
-                        <option value="Asthma or Respiratory Issues">
-                        <option value="Thyroid Disorder">
-                        <option value="Vaccination / Immunization">
-                        <option value="Pediatric Consultation">
-                        <option value="Eye Vision Issues">
-                        <option value="Dental Pain">
-                        <option value="Kidney Stones / Urology">
-                        <option value="Ear, Nose, or Throat (ENT)">
-                        <option value="Physical Therapy">
-                        <option value="Nutritional Counseling">
-                        <option value="Insomnia or Sleep Disorders">
-                        <option value="Anemia / Iron Deficiency">
-                        <option value="Arthritis Management">
-                        <option value="Sinusitis">
-                        <option value="Urinary Tract Infection (UTI)">
-                        <option value="Post-Surgery Follow-up">
-                        <option value="Sports Injury">
-                        <option value="Cholesterol Check">
-                        <option value="Weight Management">
+<div class="container">
+    <h2>Doctor Appointment</h2>
+    
+
+    <label>Patient Name</label>
+    <input type="text" id="name">
+
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile">
+
+    <label>Age</label>
+    <input type="number" id="age">
+
+    <label>Reason for seeing a doctor</label>
+    <textarea id="reason"></textarea>
+
+    <button onclick="confirmAppointment()">Confirm Appointment</button>
+
+    <div class="result" id="result">
+        <h3>✅ Appointment Confirmed we will call you soon</h3>
+        <p><strong>Name:</strong> <span id="rName"></span></p>
+        <p><strong>Mobile:</strong> <span id="rMobile"></span></p>
+        <p><strong>Age:</strong> <span id="rAge"></span></p>
+        <p><strong>Reason:</strong> <span id="rReason"></span></p>
+    
+    </div>
+</div>
+
+<script>
+    function confirmAppointment() {
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mobile").value;
+        let age = document.getElementById("age").value;
+        let reason = document.getElementById("reason").value;
+
+        if (!name || !mobile || !age || !reason) {
+            alert("Please fill all details");
+            return;
+        }
+
+        document.getElementById("rName").innerText = name;
+        document.getElementById("rMobile").innerText = mobile;
+        document.getElementById("rAge").innerText = age;
+        document.getElementById("rReason").innerText = reason;
+
+        
+
+        document.getElementById("result").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

@@ -206,3 +206,42 @@ display: flex;
 
 
 /* ..........................SKILL END ............................ */
+/* ..........................exp-start ............................ */
+
+
+/* Styling the Floating Button */
+#unique-exp-trigger {
+    position: fixed;
+    top: 18%;      /* Distance from bottom */
+    left: 43%;       /* Distance from right */
+    padding: 15px 25px;
+    background-color: #2563eb; /* Professional Blue */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded pill shape */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;     /* Ensures it stays on top of other elements */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+#unique-exp-trigger:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-5px); /* Moves up slightly when hovered */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+    #unique-exp-trigger {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* ..........................exp END ............................ */
