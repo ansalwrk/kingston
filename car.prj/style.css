@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f2f4f7;
+}
+
+/* HEADER */
+.header {
+    height: 60vh;
+    background: url("https://images.unsplash.com/photo-1502877338535-766e1452684a") center/cover no-repeat;
+}
+
+.overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+/* CAR SECTION */
+.cars {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cars h2 {
+    margin-bottom: 25px;
+}
+
+.car-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.car-list img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* BOOKING FORM */
+.booking-container {
+    background: white;
+    width: 90%;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.booking-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #333;
+}
+
+#result {
+    margin-top: 20px;
+    background: #e8f5ff;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
