@@ -11,7 +11,7 @@
     <div class="container header-inner">
       <div class="brand">
         <div class="crest" aria-hidden="true">♔</div>
-        <h1 class="site-title">Give Like a King</h1>
+        <h1 class="site-title">Give Like a King — with mercy and dignity</h1>
       </div>
       <nav class="nav">
         <a href="#donate" class="nav-link">Donate</a>
@@ -22,101 +22,51 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero" aria-label="Donate with mercy">
-      <img class="hero-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1400&q=80" alt="Hands giving / charitable support" />
-      <div class="hero-overlay">
+     
         <div class="container hero-content">
-          <h2 class="hero-title">Give Like a King — with mercy and dignity</h2>
-          <p class="hero-sub">Your gift restores hope. Small acts create big change.</p>
+          <h2 class="hero-title">Give Like a King </h2>
           <a href="#donate" class="btn primary">Donate Now</a>
         </div>
       </div>
     </section>
 
     <div class="container layout">
+      <section id="donate" class="panel donate-panel">
+        <h3>Make a Donation</h3>
 
-      <!-- LEFT: Donation Panel -->
-      <section id="donate" class="panel donate-panel" aria-labelledby="donate-title">
-        <h3 id="donate-title">Make a Donation</h3>
-        <p class="muted">Choose an amount or enter a custom value. We keep the process short and merciful.</p>
 
-        <div class="presets" role="list" aria-label="Preset donation amounts">
-          <button class="btn preset" data-amount="250">₹250</button>
-          <button class="btn preset" data-amount="500">₹500</button>
-          <button class="btn preset" data-amount="1000">₹1,000</button>
-          <button class="btn preset" data-amount="2500">₹2,500</button>
-        </div>
 
-        <form id="donationForm" class="donation-form" aria-describedby="donation-desc">
-          <div id="donation-desc" class="muted">Minimal fields — amount and (optional) name. You may donate anonymously.</div>
-
+        <form id="donationForm">
           <label class="field">
             Amount (₹)
-            <input id="amount" name="amount" type="number" min="10" step="10" required value="500" />
+            <input id="amount" type="number" value="500" />
           </label>
 
           <label class="field">
             Display name (optional)
-            <input id="donorName" name="donorName" type="text" maxlength="40" placeholder="e.g. A Generous Patron or leave blank for anonymous" />
+            <input id="donorName" type="text" />
           </label>
 
           <label class="field checkbox">
             <input id="anonymous" type="checkbox" />
-            Donate anonymously (hide name in live feed)
+            Donate anonymously
           </label>
 
           <div class="payment-actions">
-            <!-- In this static prototype these are mocked -->
             <button class="btn primary" type="submit">Pay — ₹<span id="payLabel">500</span></button>
-            <button class="btn ghost" type="button" id="oneTapMock">One‑Tap (Mock)</button>
           </div>
         </form>
 
-        <div class="money-trail card small" aria-hidden="false">
-          <h4>Money Trail — Example split</h4>
-          <div class="trail-row">
-            <span>Donated</span><strong>₹<span id="trailDonated">0</span></strong>
+        <!-- ✅ ADDED QR + PRINT -->
+        <div class="card small">
+          <h4>Pay via QR Code</h4>
+          <div class="qr-wrap">
+            <img id="qrImage" alt="QR Code" />
           </div>
-          <div class="trail-row">
-            <span>To Cause</span><strong>₹<span id="trailCause">0</span></strong>
-          </div>
-          <div class="trail-row">
-            <span>Operations</span><strong>₹<span id="trailOps">0</span></strong>
-          </div>
+          <button class="btn ghost" onclick="printBill()">Print Bill</button>
         </div>
       </section>
-
-      <!-- RIGHT: Impact, Live Feed & Progress -->
-      <aside class="panel side-panel" aria-labelledby="impact-title">
-        <h3 id="impact-title">Impact & Live Feed</h3>
-
-        <div class="card progress-card" id="impact" aria-live="polite">
-          <h4>Campaign Progress</h4>
-          <div class="campaign">
-            <div class="campaign-header">
-              <div>
-                <strong>Education</strong>
-                <div class="muted small">School kits & scholarships</div>
-              </div>
-              <div class="muted small">₹<span id="raisedEducation">45,000</span> / ₹100,000</div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" id="progressEducation" style="width:45%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card live-feed" aria-live="polite">
-          <h4>Live Feed</h4>
-          <ul id="feedList" class="feed-list" aria-live="polite" aria-relevant="additions"></ul>
-        </div>
-
-        <div class="card about" id="about">
-          <h4>About</h4>
-          <p class="muted small">This is a simple, standard donation prototype. Payments here are mocked. Integrate Stripe / Razorpay / UPI for production and follow PCI rules.</p>
-        </div>
-      </aside>
     </div>
   </main>
 
@@ -127,6 +77,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

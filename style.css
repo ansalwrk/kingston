@@ -137,10 +137,10 @@ display: flex;
 .skills-section {
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  width: 300px;
-  padding: 20px;
+  width: 370px;
+  padding: 1%;
   background: #1cbba000;
   box-shadow: 4px 0 20px rgba(7, 157, 177, 0.068);
   animation: slideInLeft 1s ease forwards;
@@ -161,8 +161,8 @@ display: flex;
 
 .skills-section h2 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
+  margin-bottom: 1%;
+  font-size: 55px;
 }
 
 .skill-group {
@@ -170,22 +170,24 @@ display: flex;
 }
 
 .skill-group h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 1px;
   color: #333;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .skills-list span {
-  background: #f0f0f0;
-  padding: 6px 12px;
+  background: #ffffffef;
+  padding: 5px 10px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight:bolder;
   transition: all 0.3s ease;
   cursor: pointer;
 }
