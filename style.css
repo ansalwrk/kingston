@@ -137,12 +137,13 @@ display: flex;
 .skills-section {
   position: fixed;
   left: 0;
-  top: 45%;
+  top: 60%;
   transform: translateY(-50%);
-  width: 370px;
+  width: 380px;
+  height:800px;
   padding: 1%;
-  background: #1cbba000;
-  box-shadow: 4px 0 20px rgba(7, 157, 177, 0.068);
+  background: #e4e4e400;
+  box-shadow: 4px 0 20px rgb(231, 231, 250);
   animation: slideInLeft 1s ease forwards;
   font-family: Arial, sans-serif;
 }
@@ -173,13 +174,13 @@ display: flex;
   font-size: 25px;
   font-weight: bolder;
   margin-bottom: 1px;
-  color: #333;
+  color: #180122;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 9px;
 }
 
 .skills-list span {
